@@ -9,10 +9,10 @@ export const router = new Router({
   routes: Routes
 });
 
-router.beforeEach((to, from, next) => {
-  return null;
-});
+// router.beforeEach((to, from, next) => {
+//   return null;
+// });
 
-router.afterEach((to, from, next) => {
-  return null;
-});
+// router.afterEach((to, from, next) => {
+//   return null;
+// });

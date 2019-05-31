@@ -10,7 +10,7 @@ export default [
     },
     {
       path: '/test',
-      name: 'HelloWorld',
+      name: 'Test',
       component: Test
     }
 ]

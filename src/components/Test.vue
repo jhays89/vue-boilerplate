@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     TEEST
+    <md-button class="md-button">test</md-button>
   </div>
 </template>
 
