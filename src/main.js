@@ -3,14 +3,9 @@
 import Vue from 'vue';
 import App from './App';
 import { router } from './router';
+import VueMaterial from './plugins/vue-material.vue'
 
-import { MdButton, MdContent, MdTabs } from 'vue-material/dist/components'; // unable to locate folder
-import 'vue-material/dist/vue-material.min.css'
-import 'vue-material/dist/theme/default.css'
-
-Vue.use(MdButton)
-Vue.use(MdContent)
-Vue.use(MdTabs)
+Vue.use(VueMaterial)
 
 Vue.config.productionTip = false
 

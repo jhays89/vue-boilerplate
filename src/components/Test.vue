@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
-    TEEST
-    <md-button class="md-button">test</md-button>
+    <md-button class="md-raised md-primary">Md Raised Button</md-button>
+    <router-link to="/">Home</router-link>
   </div>
 </template>
 
@@ -10,13 +10,12 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+
     }
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h1, h2 {
   font-weight: normal;

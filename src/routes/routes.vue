@@ -5,7 +5,7 @@ import Test from '@/components/Test'
 export default [
     {
       path: '/',
-      name: 'HelloWorld',
+      name: 'Home',
       component: HelloWorld
     },
     {
