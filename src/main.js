@@ -3,11 +3,11 @@
 import Vue from 'vue';
 import App from './App';
 import { router } from './router';
-import VueMaterial from './plugins/vue-material.vue'
+import VueMaterial from './plugins/vue-material.vue';
 
-Vue.use(VueMaterial)
+Vue.use(VueMaterial);
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
 new Vue({
