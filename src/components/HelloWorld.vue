@@ -16,15 +16,6 @@ export default {
 </script>
 
 <style scoped>
-.md-app {
-    min-height: 350px;
-    border: 1px solid rgba(#000, .12);
-  }
-
-  .md-drawer {
-    width: 230px;
-    max-width: calc(100vw - 125px);
-  }
 h1, h2 {
   font-weight: normal;
   margin-top: 0;

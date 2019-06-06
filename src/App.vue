@@ -1,10 +1,12 @@
 <template>
-  <div id="app" class="page-container md-layout-row">
+  <div id="app">
     <div class="main-wrapper">
       <side-nav></side-nav>
-      <transition name="fade">
-          <router-view/>
-      </transition>
+      <div class="main-content">
+        <transition name="fade">
+            <router-view/>
+        </transition>
+      </div>
     </div>
   </div>
 </template>
@@ -26,6 +28,8 @@ export default {
 
 #app {
   position: relative;
+  display: flex;
+  height: 100vh;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -38,12 +42,18 @@ export default {
 }
 
 .fade-enter, .fade-leave-to {
-  position: absolute;
-  right: -100%;
+  position: fixed;
+  right: -1000%;
   opacity: 0;
 }
 
 .main-wrapper {
   display: flex;
+  width: 100%;
+}
+
+.main-content {
+  position: relative;
+  flex: 1;
 }
 </style>

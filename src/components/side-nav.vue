@@ -26,6 +26,6 @@
 
 <style scoped>
 .side-nav {
-    flex: 0 0 230px
+    flex: 0 0 180px
 }
 </style>
