@@ -23,18 +23,42 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:400,400i,700');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 
 #app {
   position: relative;
   display: flex;
   height: 100vh;
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+body {
+  font-size: 14px;
+  font-family: Roboto, 'Avenir', Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: Roboto Condensed, sans-serif, 'Avenir', Helvetica, Arial;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 16px;
 }
 
 .fade-enter-active, .fade-leave-active {
