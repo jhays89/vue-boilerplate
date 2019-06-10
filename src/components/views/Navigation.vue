@@ -81,6 +81,8 @@
     top: 0;
     width: 15px;
     height: 100%;
+
+    transition: right 300ms ease-in;
 }
 
 .navigation .collapse-bar:hover {
@@ -117,7 +119,7 @@
 }
 
 .navigation.collapsed .collapse-bar {
-    left: 100%;
+    right: -15px;
 }
 
 .navigation.collapsed {
