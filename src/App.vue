@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import SideNav from './components/side-nav';
+import SideNav from './components/views/Navigation';
 
 export default {
   name: 'App',
@@ -39,6 +39,7 @@ export default {
 body {
   font-size: 14px;
   font-family: Roboto, 'Avenir', Helvetica, Arial, sans-serif;
+  color: #202124;
 }
 
 h1, h2, h3, h4 {

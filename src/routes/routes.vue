@@ -1,12 +1,12 @@
 <script>
-import HelloWorld from '@/components/HelloWorld'
-import Test from '@/components/Test'
+import Home from '@/components/views/Home'
+import Test from '@/components/views/Test'
 
 export default [
     {
       path: '/',
       name: 'Home',
-      component: HelloWorld
+      component: Home
     },
     {
       path: '/test',
