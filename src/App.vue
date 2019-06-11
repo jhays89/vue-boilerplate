@@ -1,7 +1,8 @@
 <template>
   <div id="app">
+    <app-header></app-header>
     <div class="main-wrapper">
-      <side-nav></side-nav>
+      <app-nav></app-nav>
       <div class="main-content">
         <transition name="fade">
             <router-view/>
@@ -12,12 +13,14 @@
 </template>
 
 <script>
-import SideNav from './components/views/Navigation';
+import Header from './components/Header';
+import Navigation from './components/Navigation';
 
 export default {
   name: 'App',
   components: {
-    'side-nav': SideNav
+    'app-nav': Navigation,
+    'app-header': Header
   }
 }
 </script>
@@ -28,8 +31,6 @@ export default {
 
 #app {
   position: relative;
-  display: flex;
-  height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -74,11 +75,13 @@ h4 {
 
 .main-wrapper {
   display: flex;
+  height: calc(100vh - 60px);
   width: 100%;
 }
 
 .main-content {
   position: relative;
   flex: 1;
+  margin-top: 20px;
 }
 </style>
