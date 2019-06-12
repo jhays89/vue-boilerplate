@@ -23,18 +23,24 @@ export default {
     align-items: center;
     justify-content: space-between;
     height: 60px;
-    padding: 10px 15px;
     background-color: #444;
+    background-image: url('../assets/header-bg-transparent.png');
+    background-size: 20px;
     color: #fff;
 }
 
 .header .logo-container {
-    width: 20px;
-    height: 20px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    background-image: url('/src/assets/solid-justin.png'); /*Why is this not workin?*/
+    background-image: url('../assets/solid-justin.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    margin-left: 15px;
+}
+
+.header .mobile-menu {
+    margin-right: 15px;
 }
 </style>

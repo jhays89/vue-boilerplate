@@ -1,6 +1,6 @@
 <template>
     <div class="navigation" v-bind:class="{ 'collapsed': isCollapsed }">
-        <md-list class="main-item-list">
+        <md-list class="main-item-list"> <!--Abstract out into own component -->
             <router-link to="/Test" class="nav-item">
             <span class="nav-text">Inbox</span>
             <i class="fa fa-envelope icon"></i>
