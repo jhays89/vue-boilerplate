@@ -4,6 +4,7 @@ import Vue from 'vue';
 import App from './App';
 import { router } from './router';
 import VueMaterial from './plugins/vue-material.vue';
+require('lodash/core');
 
 Vue.use(VueMaterial);
 

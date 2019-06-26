@@ -83,9 +83,5 @@ h4 {
   position: relative;
   flex: 1;
   margin-top: 20px;
-    /* background-color: #fff;
-    background-image: url('../src/assets/body-bg.png');
-    background-size: 20px;
-    color: #fff; */
 }
 </style>

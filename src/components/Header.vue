@@ -2,7 +2,7 @@
     <div class="header">
         <div class="logo-container">
         </div>
-        <div class="mobile-menu">
+        <div class="mobile-menu-container">
             mobile menu
         </div>
     </div>
@@ -40,7 +40,7 @@ export default {
     margin-left: 15px;
 }
 
-.header .mobile-menu {
+.header .mobile-menu-container {
     margin-right: 15px;
 }
 </style>
