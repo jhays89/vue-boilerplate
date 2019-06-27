@@ -2,16 +2,36 @@
     <div class="header">
         <div class="logo-container">
         </div>
-        <div class="mobile-menu-container">
-            mobile menu
+        <div class="mobile-menu-icon-container" @click="createSideWidgetEvent">
+            <div class="menu-bars-wrapper">
+                <div class="menu-bar"></div>
+                <div class="menu-bar"></div>
+                <div class="menu-bar"></div>
+            </div>
         </div>
     </div>
 </template>
 
 <script>
+import { EventBus } from '../EventBus.js';
+
 export default {
-   data() {
+    data() {
         return {};
+    },
+    
+    methods: {
+        createSideWidgetEvent() {
+            EventBus.$emit('mobile-menu', 'Test message');
+        },
+
+        test(event) {
+            alert(event);
+        }
+    },
+
+    created() {
+        EventBus.$on('mobile-menu', this.test);
     }
 }
  
@@ -40,7 +60,31 @@ export default {
     margin-left: 15px;
 }
 
-.header .mobile-menu-container {
+.header .mobile-menu-icon-container {
+    display: flex;
+    align-items: center;
     margin-right: 15px;
+    width: 35px;
+    height: 35px;
+}
+
+.header .mobile-menu-icon-container:hover {
+    cursor: pointer;
+}
+
+.header .mobile-menu-icon-container .menu-bar {
+    height: 2px;
+    background-color: #fff;
+    margin-bottom: 6px;
+
+    transition: transform 250ms ease-out;
+}
+
+.header .mobile-menu-icon-container:hover .menu-bar {
+    transform: scaleX(.8);
+}
+
+.header .mobile-menu-icon-container .menu-bars-wrapper {
+    width: 100%;
 }
 </style>

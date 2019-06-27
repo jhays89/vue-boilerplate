@@ -53,7 +53,6 @@
     }
 </script>
 
-
 <style scoped>
 .navigation {
     position: relative;
@@ -107,6 +106,18 @@
 
 .navigation.collapsed .main-item-list {
     left: -182px;
+}
+
+.navigation .main-item-list {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 180px;
+    height: 100%;
+    padding: 5px 0 0;
+    background-color: #27a0f8;
+
+    transition: left 250ms ease-in-out;
 }
 
 .navigation.collapsed .collapse-bar {

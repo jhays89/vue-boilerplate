@@ -9,18 +9,21 @@
         </transition>
       </div>
     </div>
+    <side-widget></side-widget>
   </div>
 </template>
 
 <script>
 import Header from './components/Header';
 import Navigation from './components/Navigation';
+import SideWidget from './components/SideWidget';
 
 export default {
   name: 'App',
   components: {
     'app-nav': Navigation,
-    'app-header': Header
+    'app-header': Header,
+    'side-widget': SideWidget
   }
 }
 </script>
