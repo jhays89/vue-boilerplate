@@ -13,25 +13,24 @@
 </template>
 
 <script>
-import { EventBus } from '../EventBus.js';
+import { EventBus } from '../event-bus.js';
 
 export default {
+    name: 'app-header',
+
     data() {
         return {};
     },
     
     methods: {
         createSideWidgetEvent() {
-            EventBus.$emit('mobile-menu', 'Test message');
-        },
-
-        test(event) {
-            alert(event);
+            var widget = {
+                name: 'menu-side-widget',
+                options: {}
+            };
+            
+            EventBus.$emit('open-side-widget', widget);
         }
-    },
-
-    created() {
-        EventBus.$on('mobile-menu', this.test);
     }
 }
  

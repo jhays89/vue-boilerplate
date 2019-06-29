@@ -16,7 +16,7 @@
 <script>
 import Header from './components/Header';
 import Navigation from './components/Navigation';
-import SideWidget from './components/SideWidget';
+import SideWidget from './components/side-widgets/SideWidget';
 
 export default {
   name: 'App',
