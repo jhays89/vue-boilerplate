@@ -1,6 +1,6 @@
 <template>
-    <md-list class="main-item-list">
-        <router-link to="/Test" class="nav-item">
+    <md-list class="main-item-list" @click="closeMobileMenu">
+        <router-link to="/Test" class="nav-item" >
         <span class="nav-text">Inbox</span>
         <i class="fa fa-envelope icon"></i>
         </router-link>
@@ -21,6 +21,22 @@
         </router-link>
     </md-list>
 </template>
+
+<script>
+import { EventBus } from '../event-bus.js';
+
+export default {
+    props: ['isMobileMenu'],
+
+    methods: {
+        closeMobileMenu() {
+            if(this.isMobileMenu) {
+                EventBus.$emit('close-widget');
+            }
+        }
+    }
+}
+</script>
 
 <style scoped>
 

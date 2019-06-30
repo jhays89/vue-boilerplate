@@ -1,6 +1,8 @@
 <template>
     <div class="side-widget" :class="{ 'is-opened': isOpened }" v-on:click.self="closeWidget">
-        <component class="widget" :is="widget"></component>
+        <transition name="swipe">
+            <component class="widget" :is="widget"></component>
+        </transition>
     </div>
 </template>
 
@@ -34,16 +36,41 @@ export default {
 
         closeWidget() {
             this.isOpened = false;
+            this.widget = null,
+            this.widgetOptions = null;
         }
     },
 
     created() {
         EventBus.$on('open-side-widget', this.setSideWidget);
+        EventBus.$on('close-widget', this.closeWidget);
     }
 }
 
 </script>
 
+<style>
+.side-widget .header {
+    position: relative;
+    height: 60px;
+    border-bottom: 2px solid #777;
+    background-color: #444;
+}
+
+.side-widget .header .close-btn {
+    position: absolute;
+    padding: 5px;
+    right: 10px;
+    top: 5px;
+    font-size: 40px;
+    color: #fff;
+}
+
+.side-widget .header .close-btn:hover {
+    cursor: pointer;
+}
+
+</style>
 <style scoped>
 .side-widget {
     position: fixed;
@@ -57,14 +84,7 @@ export default {
     z-index: 10;
     background-color: rgba(0,0,0,0.7);
 
-    transition: left 50ms ease-in, opacity 250ms ease-in;
-}
-
-.side-widget .widget-box {
-    position: relative;
-    background-color: red;
-    min-width: 500px;
-    width: 50%;
+    transition: left 1ms ease-in, opacity 150ms ease-out;
 }
 
 .side-widget.is-opened {
@@ -73,8 +93,18 @@ export default {
 }
 
 .side-widget .widget {
+    position: relative;
+    left: 0;
     width: 400px;
-    background-color: #fff; 
+    background-color: #fff;
+}
+
+.side-widget .swipe-enter-active, .side-widget .swipe-leave-active {
+    transition: left 300ms ease-out 50ms; 
+}
+
+.side-widget .swipe-enter, .side-widget .swipe-leave-to {
+    left: 100%;
 }
 
 @media screen and (max-width: 500px) {
