@@ -86,4 +86,10 @@ export default {
 .header .mobile-menu-icon-container .menu-bars-wrapper {
     width: 100%;
 }
+
+@media screen and (min-width: 769px) {
+    .header .mobile-menu-icon-container {
+        display: none;
+    }
+}
 </style>
