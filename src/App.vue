@@ -10,6 +10,7 @@
       </div>
     </div>
     <side-widget></side-widget>
+    <app-notification></app-notification>
   </div>
 </template>
 
@@ -17,13 +18,15 @@
 import Header from './components/Header';
 import Navigation from './components/Navigation';
 import SideWidget from './components/side-widgets/SideWidget';
+import AppNotification from './components/app-notifications/AppNotification';
 
 export default {
   name: 'App',
   components: {
     'app-nav': Navigation,
     'app-header': Header,
-    'side-widget': SideWidget
+    'side-widget': SideWidget,
+    'app-notification': AppNotification
   }
 }
 </script>

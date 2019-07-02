@@ -1,16 +1,29 @@
 <template>
   <div class="hello">
-    <md-button class="md-raised md-primary">Md Raised Button</md-button>
+    <md-button class="md-raised md-primary" @click="createAppNotificationEvent">App Notification</md-button>
     <router-link to="/">Home</router-link>
   </div>
 </template>
 
 <script>
+import { EventBus } from '../../event-bus.js';
+
 export default {
   name: 'HelloWorld',
   data () {
     return {
 
+    }
+  },
+
+  methods: {
+    createAppNotificationEvent() {
+      var widget = {
+        name: 'app-notification-user-added',
+        options: {}
+      };
+
+      EventBus.$emit('open-app-notification', widget);
     }
   }
 }

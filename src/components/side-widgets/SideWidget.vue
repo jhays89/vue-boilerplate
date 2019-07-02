@@ -44,6 +44,11 @@ export default {
     created() {
         EventBus.$on('open-side-widget', this.setSideWidget);
         EventBus.$on('close-widget', this.closeWidget);
+    },
+
+    destroyed() {
+        EventBus.$off('open-side-widget', this.setSideWidget);
+        EventBus.$off('close-widget', this.closeWidget);
     }
 }
 

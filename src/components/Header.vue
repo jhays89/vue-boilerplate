@@ -25,7 +25,7 @@ export default {
     methods: {
         createSideWidgetEvent() {
             var widget = {
-                name: 'menu-side-widget',
+                name: 'app-notification-user-added',
                 options: {}
             };
             
