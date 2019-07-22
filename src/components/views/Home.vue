@@ -9,8 +9,11 @@ export default {
   name: 'Home',
   data () {
     return {
-
     }
+  },
+
+  created() {
+    this.$api.get();
   }
 }
 </script>

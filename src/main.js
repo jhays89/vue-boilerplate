@@ -4,9 +4,12 @@ import Vue from 'vue';
 import App from './App';
 import { router } from './router';
 import VueMaterial from './plugins/vue-material.vue';
+import { api } from './api'
+    
 require('lodash/core');
 
 Vue.use(VueMaterial);
+Vue.prototype.$api = api;
 
 Vue.config.productionTip = false;
 
