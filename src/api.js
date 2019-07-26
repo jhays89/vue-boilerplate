@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+var apiBaseUrl = process.env.API_BASE_URL;
+
 export const api = {
 	ajax: function(config) {
 		config.url = apiBaseUrl + config.url;
@@ -14,7 +16,6 @@ export const api = {
 	put: function(url, request) {
 		return axios
 			.put(apiBaseUrl + url, request);
-				
 	},
 
 	post: function(url, request) {

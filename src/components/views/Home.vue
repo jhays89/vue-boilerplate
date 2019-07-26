@@ -13,7 +13,10 @@ export default {
   },
 
   created() {
-    this.$api.get();
+    this.$api.get('api/values')
+      .then(response => {
+        alert(response);
+      });
   }
 }
 </script>
